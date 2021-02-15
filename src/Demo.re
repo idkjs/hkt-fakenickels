@@ -195,7 +195,7 @@ But will it type check?
 :*/
 /* validateField((module StateLensesHKT), IntMax(10, StateLensesHKT.inj(StateLenses.Email)), form) */
 
-let intMax = (type field, module Lenses: LensesHKT with type t = field, ~maxt, field: app(int, field)) =>
+let intMax = (type field, module Lenses: LensesHKT with type t = field, ~max, field: app(int, field)) =>
  IntMax(max, field)
 intMax((module StateLensesHKT), ~max=18, StateLensesHKT.inj(StateLenses.Age))
 /* type checks! */
