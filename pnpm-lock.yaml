@@ -1,0 +1,12 @@
+devDependencies:
+  bs-platform: 9.0.0
+lockfileVersion: 5.2
+packages:
+  /bs-platform/9.0.0:
+    dev: true
+    hasBin: true
+    requiresBuild: true
+    resolution:
+      integrity: sha512-32gIXIUt1RO+OUWLrkhXFOuZKS5Cka6lEShXaVC/ohg5N8cUnoNZW9M/vW3CWnmgZkQ0Hp9g9vj5I5NfzHpy5A==
+specifiers:
+  bs-platform: ^9.0.0
