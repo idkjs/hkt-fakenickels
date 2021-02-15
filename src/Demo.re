@@ -197,7 +197,7 @@ But will it type check?
 
 let intMax = (type field, module Lenses: LensesHKT with type t = field, ~max, field: app(int, field)) =>
  IntMax(max, field)
-intMax((module StateLensesHKT), ~max=18, StateLensesHKT.inj(StateLenses.Age))
+let _ = intMax((module StateLensesHKT), ~max=18, StateLensesHKT.inj(StateLenses.Age))
 /* type checks! */
 /* intMax((module StateLensesHKT), ~max=18, StateLensesHKT.inj(StateLenses.Email)) */
 let validate = (type field, type state, module Lenses: LensesHKT with type t = field and type state = state, schema: list(validator(Lenses.t)), state: state) => {
@@ -210,7 +210,7 @@ let schema = StateLensesHKT.[
   Email(inj(StateLenses.Email))
 ]
 
-validate((module StateLensesHKT), schema, form)
+let _ = validate((module StateLensesHKT), schema, form)
 /*:
 We can't do a function like `intMax((module StateLensesHKT), ~max=18, StateLenses.Age)` because that's the whole point of the HKT hack
 :*/
